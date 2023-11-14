@@ -35,3 +35,14 @@
 *.vcxproj
 *.filters
 *.sln
+*.user
+
+# VS Code
+.vs/
+
+# Build Directory
+**/bin/
+**/bin-int/
+bin/
+bin-int/
+
