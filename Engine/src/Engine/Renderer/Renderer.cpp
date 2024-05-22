@@ -27,8 +27,6 @@ namespace Nora
 			NORA_ASSERT(false);
 			break;
 		}
-
-		s_renderer_impl_->Init();
 	}
 
 	void Renderer::SetViewport(uint32_t width, uint32_t height)

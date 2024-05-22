@@ -5,7 +5,7 @@ int main();
 
 namespace Nora
 {
-	class Application
+	class Application final
 	{
 	public:
 		Application();
@@ -13,6 +13,11 @@ namespace Nora
 		~Application();
 
 		void Run();
+
+		static Application& Get();
+
+		Window& GetWindow();
+
 	private:
 		std::unique_ptr<Window> window_;
 	private:

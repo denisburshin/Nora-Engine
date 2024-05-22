@@ -4,11 +4,15 @@
 
 namespace Nora
 {
+	Application* Application::s_application_ = nullptr;
+
 	Application::Application()
 	{
-		window_ = Window::Create();
+		s_application_ = this;
 
-		Renderer::Initialize(Renderer::API::Vulkan);
+		window_ = Window::Create();
+		
+		Renderer::Initialize();
 	}
 
 	Application::~Application()
@@ -21,5 +25,15 @@ namespace Nora
 		{
 			window_->OnUpdate();
 		}
+	}
+
+	Application& Application::Get()
+	{
+		return *s_application_;
+	}
+
+	Window& Application::GetWindow()
+	{
+		return *window_;
 	}
 }

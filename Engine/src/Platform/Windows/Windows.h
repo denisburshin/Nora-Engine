@@ -11,8 +11,10 @@ namespace Nora::Windows
 		~Window();
 
 		bool ShouldClose() const;
-
 		void OnUpdate() const override;
+
+		std::vector<const char*> GetRequiredExtensions() const override;
+
 	private:
 		GLFWwindow* window_;
 	};
