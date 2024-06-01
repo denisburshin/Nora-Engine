@@ -5,7 +5,6 @@
 	#include "Platform/Windows/Windows.h"
 #endif 
 
-
 namespace Nora
 {
 	std::unique_ptr<Window> Window::Create()

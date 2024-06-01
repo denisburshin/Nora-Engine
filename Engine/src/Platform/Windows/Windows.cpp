@@ -35,11 +35,24 @@ namespace Nora::Windows
 		glfwPollEvents();
 	}
 
+	void* Window::GetNativeWindow() const
+	{
+		return window_;
+	}
+
 	std::vector<const char*> Window::GetRequiredExtensions() const
 	{
 		uint32_t count = 0;
 		auto extensions_ptr = glfwGetRequiredInstanceExtensions(&count);
 
 		return { extensions_ptr, extensions_ptr + count };
+	}
+
+	std::pair<int, int> Window::GetFramebufferSize() const
+	{
+		int width, height;
+		glfwGetFramebufferSize(window_, &width, &height);
+
+		return { width, height };
 	}
 }

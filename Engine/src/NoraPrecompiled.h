@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Engine/Core/Platform.h"
+//Engine
+#include "Engine/Core/Base.h"
 
 //STL
 #include <iostream>
@@ -12,8 +13,6 @@
 #include <unordered_set>
 #include <unordered_map>
 
-//Engine
-#include "Engine/Core/Base.h"
 
 #ifdef NORA_PLATFORM_WINDOWS
 #include <Windows.h>
